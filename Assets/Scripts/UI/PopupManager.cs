@@ -39,11 +39,8 @@ public class PopupManager : MonoBehaviour
     {
         _blurBackground.SetActive(true);
         _pausedPopup.SetActive(true);
-        LeanTween.moveLocal(_pausedPopup, centerPosition, 1f).setEase(LeanTweenType.easeOutExpo).setOnComplete(() =>
-        {
-            AudioManager.Instance.PlayMusic(false);
-            Time.timeScale = 0f;
-        });
+        AudioManager.Instance.PlayMusic(false);
+        Time.timeScale = 0f;
     }
     public void ShowVictoryPopup()
     {

@@ -13,13 +13,17 @@ public class Enemy : MonoBehaviour
 
     private SpriteRenderer _sr;
     private Animator _anim;
+    private WaitForSeconds _flashDelay;
     private void Awake()
     {
         _sr = GetComponent<SpriteRenderer>();
         _anim = GetComponent<Animator>();
+
+        _flashDelay = new WaitForSeconds(0.083f);
     }
     public int Health { get { return _health; } set { _health = value; } }
     public bool IsInvincible { get { return _isInvincible; } set { _isInvincible = value; } }
+    public bool IsDead { get { return _isDead; } set { _isDead = value; } }
 
     public void GetHit(int damage)
     {
@@ -59,11 +63,11 @@ public class Enemy : MonoBehaviour
         {
             // Disable the sprite renderer
             _sr.enabled = false;
-            yield return new WaitForSeconds(0.0833f);
+            yield return _flashDelay;
 
             // Enable the sprite renderer
             _sr.enabled = true;
-            yield return new WaitForSeconds(0.0833f);
+            yield return _flashDelay;
         }
 
         yield return new WaitForSeconds(0.2f);

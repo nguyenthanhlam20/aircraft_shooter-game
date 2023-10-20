@@ -17,16 +17,24 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("run here");
         if (collision.CompareTag("Enemy"))
         {
             Enemy enemy = collision.GetComponent<Enemy>();
 
+            if (!enemy.IsDead)
+            {
+                gameObject.SetActive(false);
+            }
+
             if (!enemy.IsInvincible)
             {
                 enemy.GetHit(_damage);
-                gameObject.SetActive(false);
             }
+        }
+
+        if(collision.CompareTag("Sheild"))
+        {
+            gameObject.SetActive(false);
         }
     }
 

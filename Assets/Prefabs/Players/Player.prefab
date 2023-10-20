@@ -11,11 +11,14 @@ GameObject:
   - component: {fileID: 8232391998830865674}
   - component: {fileID: 8232391998830865669}
   - component: {fileID: 2805560923984757785}
-  - component: {fileID: 8864731699530069500}
-  - component: {fileID: 3449567380543367383}
   - component: {fileID: 727498536706806808}
   - component: {fileID: 3244293780500819839}
   - component: {fileID: 409159198528497129}
+  - component: {fileID: 8864731699530069500}
+  - component: {fileID: 8011475559974424643}
+  - component: {fileID: 5036789270352477771}
+  - component: {fileID: 6898879393251196989}
+  - component: {fileID: 7545958780988519229}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -120,37 +123,6 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &8864731699530069500
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8232391998830865668}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffa993a1441604b468397b96b824f7c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fireDelay: 0.1
-  bulletPool: {fileID: 0}
-  _explosionEffect: {fileID: 8300000, guid: 950929d5c487ea74c98d7f0d225142ad, type: 3}
-  _gunFireEffect: {fileID: 8300000, guid: 39a7f5df46a98324f8b86ee47184d940, type: 3}
-  speed: 2
-  anim: {fileID: 0}
---- !u!114 &3449567380543367383
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8232391998830865668}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 525195462bdf0f0448ab98a91586404d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveInput: {x: 0, y: 0}
 --- !u!50 &727498536706806808
 Rigidbody2D:
   serializedVersion: 4
@@ -209,3 +181,69 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.25
+--- !u!114 &8864731699530069500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8232391998830865668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffa993a1441604b468397b96b824f7c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 4
+--- !u!114 &8011475559974424643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8232391998830865668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a8254c6577870049b68fc8b6d8c6ca5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  joystick: {fileID: 0}
+--- !u!114 &5036789270352477771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8232391998830865668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 472453592ebf94342b4fee15a1180a7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPool: {fileID: 0}
+  fireDelay: 0.1
+--- !u!114 &6898879393251196989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8232391998830865668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: def0c99e0be37e2409386f8fc6890689, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _explosionEffect: {fileID: 0}
+  _gunFireEffect: {fileID: 0}
+--- !u!114 &7545958780988519229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8232391998830865668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45ef05e57ff891c4e84cdd42c81dc29c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

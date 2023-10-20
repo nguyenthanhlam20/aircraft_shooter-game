@@ -30,7 +30,7 @@ public class EnemyPool : MonoBehaviour
 
     private void GoIn()
     {
-        LeanTween.moveLocal(gameObject, new Vector2(transform.position.x + 1f, transform.position.y), 2f)
+        LeanTween.moveLocal(gameObject, new Vector2(transform.position.x + 0.5f, transform.position.y), 2f)
             .setEase(LeanTweenType.easeOutQuad)
             .setOnComplete(() => MoveRight());
     }
