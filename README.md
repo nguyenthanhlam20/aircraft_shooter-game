@@ -1,1 +1,2 @@
-Final project of PRN211 subject 
+# aircraft shooter game
+Final project of PRU211 subject at FPT University
