@@ -1,2 +1,1 @@
-# aircraft_shooter-game
-Final project of a subject called PRN211
+Final project of PRN211 subject 
